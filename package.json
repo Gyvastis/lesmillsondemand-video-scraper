@@ -1,0 +1,15 @@
+{
+  "name": "lesmillsondemand-video-scraper",
+  "version": "0.1.0",
+  "license": "MIT",
+  "scripts": {
+    "scrape": "node src/scrape.js",
+    "download": "node src/download.js"
+  },
+  "dependencies": {
+    "bluebird": "^3.7.2",
+    "lodash": "^4.17.15",
+    "scrape-it": "^5.2.3",
+    "youtube-dl": "^3.0.2"
+  }
+}

@@ -43,7 +43,7 @@ const saveVideoIdsToJson = videoIds => writeFile('./downloads/video_ids.json', J
   await Promise.all(videoPageUrls.map(url => fetchVideoIds(url)))
     .map(videoIds => videoIds.map(videoId => ({
       title: videoId.title,
-      url: `https://embed.vhx.tv/videos/${videoId.id}`,
+      url: `https://embed.vhx.tv/videos/${videoId.id}?vimeo=1`,
     })))
     .map(videoIds => videoIds.map(videoId => allVideoIds.push(videoId)));
   const uniqVideoIds = _.uniqBy(allVideoIds, 'url');

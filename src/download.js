@@ -3,6 +3,7 @@ const Promise = require('bluebird');
 const fs = require('fs');
 const youtubedl = require('youtube-dl');
 
+const concurrentDownloads = 5;
 const readFile = Promise.promisify(fs.readFile);
 
 const readVideoIdsFromJson = () => readFile('./downloads/video_ids.json')
@@ -47,6 +48,6 @@ const downloadVideo = (title, url) => new Promise((resolve, reject) => {
   const { title, url } = videoIds[0];
 
   await Promise.map(videoIds, ({ title, url }) => downloadVideo(title, url), {
-    concurrency: 5,
+    concurrency: concurrentDownloads,
   });
 })();

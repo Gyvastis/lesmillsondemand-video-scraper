@@ -10,7 +10,7 @@ Downloads videos from [https://watch.lesmillsondemand.com/at-home-workouts/](htt
 
 Data is stored at `./downloads`.
 
-Currently set to scrape `at-home-workouts` category.
+Currently set to scrape `at-home-workouts` category. Can be changed at `./src/scrape.js` `videoCategory`
 
 You can change the number of concurrent downloads in `./src/download.js` `concurrentDownloads`.
 

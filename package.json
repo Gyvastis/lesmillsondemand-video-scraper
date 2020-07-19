@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "bluebird": "^3.7.2",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.19",
     "scrape-it": "^5.2.3",
     "youtube-dl": "^3.0.2"
   }
